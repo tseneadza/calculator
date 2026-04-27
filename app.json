@@ -1,0 +1,27 @@
+{
+  "id": "calculator",
+  "name": "Calculator",
+  "description": "Python calculator with basic, scientific, RPN, and mode placeholders.",
+  "version": "0.1.0",
+  "type": "both",
+  "icon": "🧮",
+  "category": "utility",
+  "web": {
+    "enabled": true,
+    "entry": "src/server.py",
+    "port": 8094,
+    "framework": "fastapi",
+    "requirements": ["requirements.txt"],
+    "venv": ".venv",
+    "command": ["./start.sh"]
+  },
+  "desktop": {
+    "enabled": true,
+    "entry": "src/desktop.py",
+    "framework": "pywebview",
+    "requirements": ["requirements.txt"],
+    "venv": ".venv",
+    "command": ["./start-desktop.sh"]
+  },
+  "tags": ["calculator", "python", "scientific", "rpn"]
+}
