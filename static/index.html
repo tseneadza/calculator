@@ -16,41 +16,81 @@
         <button class="mode-btn" data-mode="conversions">Conversions</button>
       </div>
 
-      <section class="calc-panel">
+      <section class="mode-section calc-panel">
         <div id="display" class="display">0</div>
         <div class="angle-toggle">
           <button id="radBtn" class="active">Rad</button>
           <button id="degBtn">Deg</button>
         </div>
 
-        <div id="basicGrid" class="btn-grid"></div>
-        <div id="scientificGrid" class="btn-grid hidden"></div>
-
-        <section id="rpnPanel" class="rpn-panel hidden">
-          <h2>RPN Stack</h2>
-          <div id="rpnStack" class="stack"></div>
-          <div class="rpn-controls">
-            <button data-rpn="push">Push</button>
-            <button data-rpn="drop">Drop</button>
-            <button data-rpn="swap">Swap</button>
-            <button data-rpn="clear">Clear</button>
-            <button data-rpn-binary="+">+</button>
-            <button data-rpn-binary="-">-</button>
-            <button data-rpn-binary="*">*</button>
-            <button data-rpn-binary="/">/</button>
-            <button data-rpn-unary="sin">sin</button>
-            <button data-rpn-unary="cos">cos</button>
-            <button data-rpn-unary="tan">tan</button>
+        <div id="basicLayout" class="mode-layout">
+          <div class="key-group">
+            <h3>Numbers</h3>
+            <div id="basicNumbers" class="btn-grid numeric-grid"></div>
           </div>
-        </section>
+          <div class="key-group">
+            <h3>Operators</h3>
+            <div id="basicFunctions" class="btn-grid function-grid"></div>
+          </div>
+        </div>
+
+        <div id="scientificLayout" class="mode-layout hidden">
+          <div class="key-group">
+            <h3>Numbers</h3>
+            <div id="scientificNumbers" class="btn-grid numeric-grid"></div>
+          </div>
+          <div class="key-group">
+            <h3>Operators</h3>
+            <div id="scientificOps" class="btn-grid function-grid"></div>
+          </div>
+          <div class="key-group">
+            <h3>Scientific Functions</h3>
+            <div id="scientificFunctions" class="btn-grid science-grid"></div>
+          </div>
+
+          <section id="rpnPanel" class="rpn-panel hidden">
+            <h2>RPN Stack</h2>
+            <div id="rpnStack" class="stack"></div>
+            <div class="rpn-groups">
+              <div class="rpn-group">
+                <h3>Stack Actions</h3>
+                <div class="rpn-controls">
+                  <button data-rpn="push">Push</button>
+                  <button data-rpn="drop">Drop</button>
+                  <button data-rpn="swap">Swap</button>
+                  <button data-rpn="clear">Clear</button>
+                </div>
+              </div>
+
+              <div class="rpn-group">
+                <h3>Binary Ops</h3>
+                <div class="rpn-controls">
+                  <button data-rpn-binary="+">+</button>
+                  <button data-rpn-binary="-">-</button>
+                  <button data-rpn-binary="*">*</button>
+                  <button data-rpn-binary="/">/</button>
+                </div>
+              </div>
+
+              <div class="rpn-group">
+                <h3>Unary Ops</h3>
+                <div class="rpn-controls">
+                  <button data-rpn-unary="sin">sin</button>
+                  <button data-rpn-unary="cos">cos</button>
+                  <button data-rpn-unary="tan">tan</button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
       </section>
 
-      <section id="programmablePanel" class="placeholder hidden">
+      <section id="programmablePanel" class="mode-section placeholder hidden">
         <h2>Programmable</h2>
         <p>Coming soon: user-defined functions, scripts, and memory programs.</p>
       </section>
 
-      <section id="conversionsPanel" class="placeholder hidden">
+      <section id="conversionsPanel" class="mode-section placeholder hidden">
         <h2>Conversions</h2>
         <p>Coming soon: unit, currency, and base conversions.</p>
       </section>

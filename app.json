@@ -11,7 +11,7 @@
     "entry": "src/server.py",
     "port": 8094,
     "framework": "fastapi",
-    "requirements": ["requirements.txt"],
+    "requirements": "requirements.txt",
     "venv": ".venv",
     "command": ["./start.sh"]
   },
@@ -19,7 +19,7 @@
     "enabled": true,
     "entry": "src/desktop.py",
     "framework": "pywebview",
-    "requirements": ["requirements.txt"],
+    "requirements": "requirements.txt",
     "venv": ".venv",
     "command": ["./start-desktop.sh"]
   },
