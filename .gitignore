@@ -7,3 +7,8 @@ __pycache__/
 dist/
 build/
 .DS_Store
+.autoclaude/
+.claude_agent_farm_backups/
+.claude_agent_farm_state.json
+.heartbeats/
+.cursor/
